@@ -39,7 +39,7 @@ import java.math.BigInteger;
             total = 4
             klaudia has 1 more apple
             this would print 5 (klaudia would have 3 natalia would have 2)
-
+    @see BigInteger
  */
 public class Julka {
     public static void main(String[] args) {
@@ -66,8 +66,11 @@ public class Julka {
         input.close();
     }
 
-    /*
-    @return: null if not possible. If possible, returns a big integer array where
+    /**
+     * @param totalApples the sum of natalia apples and klaudia's apples.
+     * @param difference klaudias apples - natalia apples. Can be negative
+     *
+     * @return null if not possible. If possible, returns a big integer array where
             index 0 contains klaudia number an index 1 contains natalia's number
      */
     public static BigInteger[] calculateValues(BigInteger totalApples, BigInteger difference)
