@@ -1,12 +1,13 @@
-package prob.biginteger.numguess;
+package prob.biginteger;
 
 import util.BigIntegerUtil;
-import util.io.Input;
+import util.Input;
 
 import java.math.BigInteger;
 
 /**
- * Created by neilprajapati on 7/2/16.
+ * Note to Neil: review how to make bigIntegers every SINGLE DAY SO THEY KNOW FO SHO :D
+ * Note to Neil: make them do an example of printing a random big integer first.
  */
 public class NumberGuessingGame {
     public static void main(String[] args) {
@@ -17,17 +18,20 @@ public class NumberGuessingGame {
 
         BigInteger userAnswer = input.promptBigInteger();
         BigInteger answer = BigIntegerUtil.random(BigInteger.ONE, max);
+
+
         while(!userAnswer.equals(answer))
         {
             int compareToResult = userAnswer.compareTo(answer);
             if(compareToResult > 0) System.out.print("too big. ");
             else if(compareToResult < 0) System.out.print("too small. ");
             else {
-                System.out.println("YOU WIN :D");
-                return;
+                break;
             }
             System.out.println("Try again: ");
             userAnswer = input.promptBigInteger();
         }
+
+        System.out.println("YOU WIN :D");
     }
 }

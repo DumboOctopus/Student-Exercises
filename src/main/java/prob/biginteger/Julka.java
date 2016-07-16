@@ -1,6 +1,6 @@
-package prob.biginteger.julka;
+package prob.biginteger;
 
-import util.io.Input;
+import util.Input;
 
 import java.math.BigInteger;
 
@@ -47,19 +47,14 @@ public class Julka {
         BigInteger totalApples = input.promptBigInteger("How many total apples:");
         BigInteger difference = input.promptBigInteger("How many more apples does Klaudia have:");
 
-
-        BigInteger sum = totalApples.add(difference);
-        BigInteger two = new BigInteger("2");
-
-        if(sum.remainder(two).equals(BigInteger.ZERO)) {
-            BigInteger klaudiaApples = totalApples.add(difference).divide(two);
-            BigInteger nataliaApples = totalApples.subtract(klaudiaApples);
-
-            System.out.println("Klaudia has: " + klaudiaApples.toString());
-            System.out.println("Natalia has: " + nataliaApples.toString());
-        } else
+        BigInteger[] calc = calculateValues(totalApples, difference);
+        if(calc == null)
         {
             System.out.println("Not possible");
+        }else
+        {
+            System.out.println("Klaudia's apples: " + calc[0]);
+            System.out.println("Natalia's apples: " + calc[1]);
         }
 
 
@@ -75,11 +70,12 @@ public class Julka {
      */
     public static BigInteger[] calculateValues(BigInteger totalApples, BigInteger difference)
     {
+
         BigInteger sum = totalApples.add(difference);
         BigInteger two = new BigInteger("2");
 
         if(sum.remainder(two).equals(BigInteger.ZERO)) {
-            BigInteger klaudiaApples = totalApples.add(difference).divide(two);
+            BigInteger klaudiaApples = sum.divide(two);
             BigInteger nataliaApples = totalApples.subtract(klaudiaApples);
 
             return new BigInteger[]{klaudiaApples, nataliaApples};

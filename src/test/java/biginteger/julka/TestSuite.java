@@ -1,11 +1,10 @@
-package prob.biginteger.julka.test.firstsuite;
+package biginteger.julka;
 
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 
 @RunWith(Suite.class)
 @Suite.SuiteClasses({
-        TestTest.class,
         TestJulka.class
 })
 

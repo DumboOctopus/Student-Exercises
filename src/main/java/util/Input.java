@@ -1,10 +1,11 @@
-package util.io;
+package util;
 
 import java.math.BigInteger;
 import java.util.Scanner;
 
 /**
  * Created by neilprajapati on 6/25/16.
+ * neilprajapati, dont forget to javaDoc this file.
  */
 public class Input {
     private Scanner scan;
