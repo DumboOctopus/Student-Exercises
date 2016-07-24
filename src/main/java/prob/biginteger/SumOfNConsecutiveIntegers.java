@@ -13,7 +13,7 @@ public class SumOfNConsecutiveIntegers {
 
     public static void main(String[] args) {
         Input input = new Input();
-        System.out.println(sum(input.promptBigInteger("What is the first number")));
+        System.out.println(sum(input.promptBigInteger("Sum of what number of ints")));
     }
 
     /**
