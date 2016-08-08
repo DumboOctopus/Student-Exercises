@@ -66,6 +66,16 @@ public class Input {
         return scan.nextBigInteger();
     }
 
+    public String promptString(String question)
+    {
+        System.out.println(question);
+        return promptString();
+    }
+    public String promptString()
+    {
+        return scan.next();
+    }
+
     //=========================OPENING AND CLOSING SCANNER=============//
     public void close()
     {

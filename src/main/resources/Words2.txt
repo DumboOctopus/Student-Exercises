@@ -1,0 +1,68 @@
+//Notes: hint are usually first and last character interjected with * unless there is a "hint: ..." chunk. When there is a "hint: ..." chucnk, just print out whatever follows the colon. Not all words have an "hint: ..." If the person types in HINT, then the program must print out the hint or print out the "[first charcter]*****[last character]"
+//Note: e.g means example. ALl words will have an e.g. If the person gets the question wrong, then print out the example (e.g).
+//Note: make sure ur programs don't make //Note a word :D
+bard: (n) a poet
+	e.g: The wandering bard had an impressive knowledge or poetry
+remedial: (n) supplying a remedy; intended to correct
+	e.g: I had to take 15 remedial English course in college because my high school never taught me grammar
+	hint: re*****
+dichotomy: (n) the grouping of something into two distinct categories
+	e.g: The dichotomy of evil and good may stem from the communist era
+motley: (adj) having elements of great variety; composed of many colors
+	e.g: The motley of species in the rainforest is astounding.
+paramount: (n) supreme; of highest importance or power
+	e.g: At the moment, Bill's paramount concern was how he was going to get home in time to watch the next episode of "Ningago: Masters of Spinjitsu"
+	hint: para-something
+score: (v) to make lines or cuts
+	e.g: With the help of my magic java stick, I scored the dirt with the words "System.out.println(hello world);"
+effervescent: (adj) high spirits or excitement
+	e.g: The effervescent little kid was so excited to learn computer science, Richard couldn't deny his request to join the Advanced Data Structures and Algorithms class
+	hint: effer-something
+habitat: (n) a place where something is usually found
+	e.g: "See that in forest!" Bear Grylls exclaimed, "That right there is a wild bear in its natural habitat"
+languish: (v) to decay; to lose energy or health
+	e.g: Done with SAT classes, the exhausted student languished in front of the TV for the remaining weeks of summer
+tender: (n) a legal offer
+	hint: it also means that something is soft
+	e.g: The tender was not accepted by the judge for he felt that it was unjustified.
+malinger: (v) to pretend to be sick to avoid going to work (or your SAT Prep class :D)
+	e.g: The SAT student hatched an amazing plan to malinger from elite tomorrow: eating posion ivy.
+	hint: ends with linger.
+ambiguous: (adj) having multiple interpretations
+	e.g: His ambiguous phrasing made it impossible to figure out what he was trying to say. 
+	hint: NO HINT FOR THIS ONE :D
+elicit: (v) to create some sort of response
+	e.g: Billy's insult elicited the most fearsome response: "Your a bigger one!"
+	hint: sounds like lick
+implore: (v) to beg
+	e.g: Even though parents of the student implored him to try computer science, the stubborn student refused to change his major.
+ignominy: (n) shame
+	e.g: A feeling of ignominy washed over the student when Hansel realized he had just copy pasted Nolan's code for the project.
+predilection: (n) preference
+	e.g: John has a predilection for a board game called "Minions"
+revere: (v) to venerate; to honor
+	e.g: I revere Nik for bestowing his knowledge of Computer Science to me.
+restitution: (n) compensation
+	e.g: The angry asian parent remanded restitution for the SAT classes after her child scored a 1500 instead of the expected 1600.
+compensation: (n) restitution
+	e.g: Compensation is a long word. I am getting lazy now.
+	hint: its not restitution :D
+diction: (n) word choice
+	e.g: The author utilizes strong diction to emphasize her opinion on education. 
+congenial: (n) friendly
+	e.g: Everyone loves Yale because of his congenial nature; his friendliness makes everyone's day a little brighter.
+nascent: (adj) something that was just born
+	e.g: The nascent plan to malinger was still full of holes, the most obvious one being where to get posion ivy.
+demographics: (n) distribution of human populations
+	e.g: The SAT student felt like he learned more about demographics than math from this simple lesson on charts.
+salutary: (adj) beneficial especially when the thing described is unpleasant
+	e.g: Although very unpleasant at times, studying SAT vocab can be salutary and help one in the long term
+vitality: (n) life force
+	e.g: His vitality waning, the old man spoke his last words: "System.out.println("bye world")"
+	hint: they use this word in games sometimes.
+saga: a long story usually of a hero
+	e.g: Although the recount of bard's saga took 3 hours, he never lost the audience's attention.
+	hint: NO HINT :D
+optimum: best possible time/condition
+	e.g: Waiting for the optimum time, the boy kept the purple flower in his lunch pail so he could reveal it to his crush at the perfect time.
+	hint: ends with "mum"
