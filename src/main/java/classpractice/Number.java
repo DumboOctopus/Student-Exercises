@@ -1,8 +1,11 @@
 package classpractice;
 
 /**
- * Created by neilprajapati on 8/13/16.
- * neilprajapati, dont forget to javaDoc this file.
+ * Note to neil, remember instead when teaching this next time, change the add method
+ * so its more like BigInteger add method. Its more difficult to explain yes, but its
+ * more intutive and the BigInteger analogy works a lot better then. :D
+ *
+ *
  */
 public class Number {
     private int value;
