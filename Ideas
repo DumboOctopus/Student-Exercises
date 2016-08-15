@@ -1,0 +1,71 @@
+I JUST THOUGHT OF AN AMAZING IDEA:
+
+
+this can be an inheritance exercise. Also a JUnit and git introduction. We will make several class
+that accept a Number where Number is an interface. Later it can be "genricified" for practicing generics:
+    Number:
+        multiply(Number n):Number
+        multiply(double d):Number
+        divide(Number n):Number
+        add(Number n):Number
+        subtract(Number n):Number
+        toPowerOf(Number n):Number
+
+
+Here are some examples of classes that use Number:
+
+    (for RealNumber, HexNumber, BinaryNumber, SigFig, UncertainNumber, FloatingPointNumber and maybe ComplexNumber)
+    final class Formulas: (introduces utility class versus concrete class)
+        (going into class to access method concept)
+        static Number volumeOfCylinder(Number height, Number radius);
+        static Number perimeterOfRectangle(Number length, Number height);
+        etc
+
+    (for all Number subclasses. Private constructor and factory methods. EXTREMELY DIFFICULT do together in class :D i wont trolll them too much)
+    Expression e = Expression.createExpression(String expression)
+    Number n = e.evaluate(Number...);
+        or genericified
+    Expression e = Expression.createExpression(String expression)
+    T n = e.evaluate<T>(T...);
+
+    (Do one with delegation and then one with extension)
+    NumberWithUnits: (can even implement Number :D)
+        ctor(Number n, String unit)
+
+    (introduction to generics. Do with and without. AKA same way i taught Caroline and Jenifying)
+    Vector<? extends Number>
+
+    (for them to do for hw :D)
+    Matrix<? extends Number>
+
+
+
+Here's somethings that will implement Number:
+    RealNumber:
+        just a double bc
+
+    HexNumber:
+        (introduction to different bases)
+
+    BinaryNumber
+        (have the teachers do this so they can practice)
+
+    SigFig:
+        sig figs bruh
+
+    UncertainNumber:
+        (+/- notation number)
+
+    FloatingPointNumber:
+        (implements how floating point numbers work behind the scene)
+    ComplexNumber:
+        a + bi
+
+
+
+
+etc...anything that can be multiplied, added, divided and subtracted
+
+
+difficulty: INSANE.
+who to give it to: Literally teaches like 10 difficult concepts by the end of it. lets only do it in the teacher class. Or Nolan. Like not nolan class just nolan bc he is nolan.
