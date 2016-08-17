@@ -9,12 +9,13 @@ that accept a Number where Number is an interface. Later it can be "genricified"
         divide(Number n):Number
         add(Number n):Number
         subtract(Number n):Number
-        toPowerOf(Number n):Number
+        toPowerOf(int n):Number //only ints so it doesn't get super complicated
+        toPowerOf(Number n): Number
 
 
 Here are some examples of classes that use Number:
 
-    (for RealNumber, HexNumber, BinaryNumber, SigFig, UncertainNumber, FloatingPointNumber and maybe ComplexNumber)
+    (for RealNumber, HexNumber, BinaryNumber, SigFig, UncertainNumber, Fraction and maybe ComplexNumber)
     final class Formulas: (introduces utility class versus concrete class)
         (going into class to access method concept)
         static Number volumeOfCylinder(Number height, Number radius);
@@ -43,6 +44,13 @@ Here are some examples of classes that use Number:
 Here's somethings that will implement Number:
     RealNumber:
         just a double bc
+        (should i introduce cloning?)
+
+    Fraction:
+        has numerator and denominator and does math.
+        2 constructors:
+            ctor(long numerator, long denom)
+            (Challenge problem)ctor(double num)
 
     HexNumber:
         (introduction to different bases)
@@ -56,12 +64,10 @@ Here's somethings that will implement Number:
     UncertainNumber:
         (+/- notation number)
 
-    FloatingPointNumber:
-        (implements how floating point numbers work behind the scene)
     ComplexNumber:
         a + bi
 
-
+    FloatingPointNumber
 
 
 etc...anything that can be multiplied, added, divided and subtracted
@@ -69,3 +75,59 @@ etc...anything that can be multiplied, added, divided and subtracted
 
 difficulty: INSANE.
 who to give it to: Literally teaches like 10 difficult concepts by the end of it. lets only do it in the teacher class. Or Nolan. Like not nolan class just nolan bc he is nolan.
+
+
+TimeTable:
+    1:
+        Utility class Formula using doubles
+        Introduce testing
+        Introduce javadocing
+        Introduce git
+    2:
+        UML + write RealNumber class + javadoc + test
+        Change Formula so it uses RealNumber and doubles
+        UML + write the Fraction class + javadoc + test
+        refactor Fraction and RealNumber to implement Number interface + change Formulas class to accept Number
+    3:
+        Introduce different number system
+        UML + HexNumber implements Number + javadoc + test
+        First implementation only changes toString so its hex string
+        Second implementation extends RealNumber
+        third implementation actually does hex calculations with strings
+        Teachers write a BinNumber class
+    3.1: (if they want more practice)
+        UML + SigFig implements Number + javadoc + test
+        UML + ComplexNumber implements Number + javadoc + test
+            1st: fields for (double)a and (double)b in (a + bi)
+            2nd: fields in Number
+    4.0:
+        UML + ReaNumberWithSIUnits + javadoc + test
+            1: implements Number delegation of RealNumber and Unit
+                1.0: show string representation of units
+                1.1: show enum
+                    enum for the SIUnits :D
+                1.2: more enum
+                    enum class has conversion methods between units
+                    enum could use enum for multipliers and enum for base unit :D
+            2: extension of RealNumber and delegation of Unit
+                enum for SIUnits :D
+    4.1: if they want more practice
+        UML + Range + javadoc + test
+        UML + Vector3D + javadoc + test
+        UML + Matrix + javadoc + test
+    5.0:
+        AssignedNumber to introduce private constructors + factory methods
+            each number is recorded so it won't ever be repeated
+    6:0:
+        introduce packages as organization units
+        create a jar
+        use the jar in a separate project.
+    7.0: have jenifier and caroline teach generics while i do my chem hw :D
+    8.0: CHALLENGE:
+        create the expressions class using private constructor and factory method like
+        (for all Number subclasses. Private constructor and factory methods)
+            Expression e = Expression.createExpression(String expression)
+            Number n = e.evaluate(Number...);
+                or genericified
+            Expression e = Expression.createExpression(String expression)
+            T n = e.evaluate<T extends Number>(T...);
