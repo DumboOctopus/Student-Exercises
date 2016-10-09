@@ -137,19 +137,6 @@ public class UncertainNumber {
 
     //heh
     public static void main(String[] args) {
-        UncertainNumber cylinderMass = new UncertainNumber(142.13, 0.01);
-        UncertainNumber cylinderHeight = new UncertainNumber(5.65, 0.01);
-        UncertainNumber cylinderDiameter = new UncertainNumber(1.91, 0.01);
-
-        UncertainNumber wireMass = new UncertainNumber(4.33, 0.01);
-        UncertainNumber wireLength = new UncertainNumber(37.22, 0.1);
-
-        UncertainNumber cylinderVolume = (cylinderDiameter.divide(2).multiply(cylinderDiameter.divide(2)).multiply(Math.PI).multiply(cylinderHeight));
-        UncertainNumber cylinderDensity = cylinderMass.divide(cylinderVolume);
-        UncertainNumber wireRadiusSquared = wireMass.divide(wireLength.multiply(cylinderDensity).multiply(Math.PI));
-        UncertainNumber wireRadius = (wireRadiusSquared.toPowerOf(0.5));
-        System.out.println(wireRadius.multiply(2)); //note its in cm
-
 
     }
 

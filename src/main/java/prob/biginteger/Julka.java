@@ -45,7 +45,7 @@ public class Julka {
     public static void main(String[] args) {
         Input input = new Input();
         BigInteger totalApples = input.promptBigInteger("How many total apples:");
-        BigInteger difference = input.promptBigInteger("How many more apples does Klaudia have:");
+        BigInteger difference = Input.getBigInteger("How many more apples does Klaudia have:");
 
         BigInteger[] calc = calculateValues(totalApples, difference);
         if(calc == null)
@@ -57,8 +57,6 @@ public class Julka {
             System.out.println("Natalia's apples: " + calc[1]);
         }
 
-
-        input.close();
     }
 
     /**

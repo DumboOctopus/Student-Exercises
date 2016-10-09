@@ -1,0 +1,66 @@
+Classes Teaching Order thing. For new students, for old students just kinda figure it out as it goes
+
+Teach usage before creation:
+    BigInteger Problems
+
+Teach how to draw them:
+    [ref] ----> Object
+
+Teach several simple examples (no constructors, no visibility):
+    Person:
+        +age
+        +name
+        +toString()
+    Student:
+        +grade
+        +age
+        +name
+        +toString()
+    Classroom:
+        has-2 Students
+        +getOlderStudent()
+        +getYoungerStudent()
+        +toString()
+    Number (but simple version)
+        +value
+        +add(int other)
+        +subtract(int other)
+        +toString()
+    
+REMEMBER:
+    MAKE THEM USE the classes they make. 
+    Incrementally develop them. 
+    Make them draw out the program as it executes
+    TRACE THE CODE. REMMEBER TRACE THE CODE ITS VERY IMPORTANT
+    create them together in class, then have them try to create them on their own. 
+    
+//==========now here the untested part==============//
+
+Utility class:
+    MathUtilityClass class
+    StudentUtilityClass
+    ClassroomUtilityClass
+    NumberUtilityClass
+
+Explain java's Math class
+
+REMEMBER:
+    Compare and contrast concrete and utility classes
+    make sure they understand static by intuition first, not by definition. 
+    
+---back to concrete classes:
+
+Visibilty:
+    public and private
+    make getters and setters
+   
+Constructors:
+    Make constructors
+
+--lets make big games and stuff :D
+Basic Slang words quiz (or SAT words):
+    Word class:
+        +word
+        +definition
+    Main class
+        +main(String[] args)

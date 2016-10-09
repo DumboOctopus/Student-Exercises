@@ -4,8 +4,29 @@ import java.math.BigInteger;
 import java.util.Scanner;
 
 /**
- * Created by neilprajapati on 6/25/16.
- * neilprajapati, dont forget to javaDoc this file.
+ * This class is rather confusing to use so heres a general description.
+ *
+ * Input is a class which is instianiated to get user input from the terminal.
+ * Unlike scanner, it reprompts the user if there is an issue with the input. For example,
+ * one types "hi" when the code was prompting an int.
+ *
+ * Usually, one creates an instance of the Input object to get Input with code similar to:
+ * <code>
+ *     Input input = new Input();
+ *     ...
+ *     String response = input.promptString("I love u");
+ *
+ * </code>
+ *
+ * However, in order to make it more initive, there are static (class) methods which
+ * will handle the creation of the Input by itself.
+ *
+ * <code>
+ *     String response = Input.getString("i love u");
+ * </code>
+ *
+ * Note: all methods starting with "get" are static. All starting with "prompt" are non-static.
+ *
  */
 public class Input {
     private Scanner scan;
@@ -17,7 +38,7 @@ public class Input {
 
 
     //=====================PROMPTING=============================//
-    public int promtInt(String question)
+    public int promptInt(String question)
     {
         System.out.println(question);
         return promptInt();
@@ -26,8 +47,8 @@ public class Input {
     public int promptInt()
     {
         while(!scan.hasNextInt()){
-            if(scan.hasNext()){
-                System.out.println(scan.next() + " is not an int. Retry:");
+            if(scan.hasNextLine()){
+                System.out.println(scan.nextLine()+ " is not an int. Retry:");
             }
         }
         return scan.nextInt();
@@ -43,8 +64,8 @@ public class Input {
     public double promptDouble()
     {
         while(!scan.hasNextDouble()){
-            if(scan.hasNext()){
-                System.out.println(scan.next() + " is not an double. Retry:");
+            if(scan.hasNextLine()){
+                System.out.println(scan.nextLine()+ " is not an double. Retry:");
             }
         }
         return scan.nextDouble();
@@ -59,8 +80,8 @@ public class Input {
     public BigInteger promptBigInteger()
     {
         while(!scan.hasNextBigInteger()){
-            if(scan.hasNext()){
-                System.out.println(scan.next() + " is not an BigInteger. Retry:");
+            if(scan.hasNextLine()){
+                System.out.println(scan.nextLine() + " is not an BigInteger. Retry:");
             }
         }
         return scan.nextBigInteger();
@@ -73,7 +94,7 @@ public class Input {
     }
     public String promptString()
     {
-        return scan.next();
+        return scan.nextLine();
     }
 
     //=========================OPENING AND CLOSING SCANNER=============//
@@ -83,6 +104,52 @@ public class Input {
             scan.close();
             scan = null;
         }
+    }
+
+    //=====================IF U DON'T WANT IT WITH OBJECTS==================//
+    private static Input defaultInput;
+
+    static{
+        defaultInput = new Input();
+    }
+    public static int getInt(String question)
+    {
+        return defaultInput.promptInt(question);
+    }
+
+    public static int getInt()
+    {
+        return defaultInput.promptInt();
+    }
+
+
+    public static double getDouble(String question)
+    {
+        return defaultInput.promptDouble(question);
+    }
+
+    public static double getDouble()
+    {
+        return defaultInput.promptDouble();
+    }
+
+
+    public static BigInteger getBigInteger(String question)
+    {
+        return defaultInput.promptBigInteger(question);
+    }
+    public static BigInteger getBigInteger()
+    {
+        return defaultInput.promptBigInteger();
+    }
+
+    public String getString(String question)
+    {
+        return defaultInput.promptString(question);
+    }
+    public String getString()
+    {
+        return defaultInput.promptString();
     }
 
 }
